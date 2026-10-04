@@ -1,0 +1,246 @@
+:root {
+  --yellow: #FFD54F;
+  --coral: #FF6B6B;
+  --sky-blue: #4DB6E8;
+  --green: #66C56C;
+  --purple: #A66DD4;
+  --orange: #FF9F43;
+  --teal: #45C2B1;
+  --pink: #F47FA6;
+  --inactive: rgb(150, 147, 147);
+  --inactive-text: rgb(236, 230, 230);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  padding: 1rem;
+  font-family: 'Fredoka', sans-serif;
+}
+
+#app {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 4/3;
+  margin: auto;
+}
+
+/* The Home Page Styles */
+.home-page {
+  position: relative;
+  height: 100%;
+  background-image: url('/images/game-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-page-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  width: 66%;
+  height: 44%;
+  border-radius: 1rem;
+  background-color: #64c6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.home-page-menu label {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #7e30be;
+}
+
+.home-page-menu select {
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background-color: #FEE337;
+  outline: none;
+  text-align: center;
+}
+
+#start-button {
+  width: 20%;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  background-color: #64aa03;
+  box-shadow: 0 4px 5px black;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  color: white;
+}
+
+#start-button:hover {
+  background-color: var(--coral);
+}
+
+#homeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#homeBtn:hover {
+  scale: 1.1;
+}
+
+#homeBtn img {
+  height: 100%;
+  width: 100%;
+}
+
+/* The robot */
+.robot-container {
+  position: absolute;
+  height: 10rem;
+  width: 7rem;
+  bottom: 19%;
+  right: 4%;
+}
+
+#robot {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.robot-speech {
+  position: absolute;
+  width: 120%;
+  font-size: 0.8rem;
+  bottom: 90%;
+  left: 0%;
+  border: 1px solid #e20de9;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.robot-speech::before,
+.robot-speech::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+
+.robot-speech::before {
+  bottom: -21px;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 21px solid #e20de9;
+}
+
+.robot-speech::after {
+  bottom: -19px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+}
+
+/* The Game Page Styles */
+.game-page {
+  position: relative;
+  height: 100%;
+  background-image: url('/images/game-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.letter-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  width: 66%;
+  height: 44%;
+  border: 2px solid black;
+  border-radius: 1rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.letter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(118, 118, 121);
+  border-radius: 50%;
+  width: 10%;
+  aspect-ratio: 1/1;
+  background-color: var(--inactive);
+  color: var(--inactive-text);
+}
+
+.highlighted {
+  border: 1px solid rgb(195, 0, 255);
+  box-shadow: 0 0 16px rgb(195, 0, 255);
+}
+
+/* the victory page */
+.victory-page {
+  position: relative;
+  height: 100%;
+  background-image: url('/images/victory-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#play-again-btn {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  height: 4rem;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border: none;
+}
+
+#play-again-btn:hover {
+  scale: 1.05;
+}
+
+#play-again-btn img {
+  height: 100%;
+  width: 100%;
+}
