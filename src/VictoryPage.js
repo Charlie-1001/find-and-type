@@ -13,12 +13,12 @@ export class VictoryPage {
     this.app.innerHTML = `
       <div class="victory-page">
         <button id="play-again-btn">
-          <img src="/images/replay-btn.png" alt="play again button" />
+          <img src="${import.meta.env.BASE_URL}images/replay-btn.png" alt="play again button" />
         </button>
       </div>
 
       <button id="homeBtn">
-        <img src="/images/home-btn.png" alt="home button image" />
+        <img src="${import.meta.env.BASE_URL}images/home-btn.png" alt="home button image" />
       </button>
     `;
 

@@ -9,7 +9,7 @@ export class Robot {
       encourage: "Keep it up! Almost done!\u{2728}",
       replayInstruction: "Well done!\u{1F3C6}\u{1F389} Now click the <strong>Replay</strong> button to play again or <strong>Home</strong> button to go back to the home page.",
     };
-    this.robotImg = ['/images/robot-1.png', '/images/robot-2.png'];
+    this.robotImg = [`${import.meta.env.BASE_URL}images/robot-1.png`, `${import.meta.env.BASE_URL}images/robot-2.png`];
     this.currentIndex = 0;
     this.robotSpeechTimer = null;
   }

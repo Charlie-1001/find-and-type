@@ -1,7 +1,7 @@
 const soundList = {
-  keyClick: "/sounds/key-click.wav",
-  bgSound: "/sounds/bgm-best-day-ever.mp3",
-  victorySound: "/sounds/eff-victory-ring.wav",
+  keyClick: `${import.meta.env.BASE_URL}sounds/key-click.wav`,
+  bgSound: `${import.meta.env.BASE_URL}sounds/bgm-best-day-ever.mp3`,
+  victorySound: `${import.meta.env.BASE_URL}sounds/eff-victory-ring.wav`,
 }
 const music = new Audio();
 const bgm = new Audio();

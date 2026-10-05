@@ -24,7 +24,7 @@ export class GamePage {
       <div class="letter-container"></div>
     </div>
     <button id="homeBtn">
-      <img src="/images/home-btn.png" alt="home button image" />
+      <img src="${import.meta.env.BASE_URL}images/home-btn.png" alt="home button image" />
     </button>
     `;
 
